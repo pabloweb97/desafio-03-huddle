@@ -1,0 +1,265 @@
+:where(header, main, section){
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: $font-poppins;
+    }
+
+    a, p {
+        font-family: $font-opensans;
+        text-decoration: none;
+    }
+}
+
+:where(footer) {
+    p, a {
+        color: $cyan-pale;
+    }
+    ul {
+        list-style: none;
+    }
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.container-header {
+    @include w-h(100%, auto);
+    margin: auto;
+    padding-bottom: 3rem;
+    background: $cyan-pale url(../images/bg-hero-desktop.svg) no-repeat top center / contain;
+}
+
+.container-logo-free {
+    @include w-h(85%, auto);
+    padding-top: 2rem;
+    margin: auto;
+    @include d-flex (row, space-between, center);
+}
+
+.logo {
+    &__img {
+        @include w-h(200px, auto);
+    }
+}
+
+.cta {
+    &__text {
+        display: inline-block;
+        color: $cyan-dark;
+        padding: .8rem 3rem;
+        font-size: .9rem;
+        background-color: #fff;
+        font-family: $font-opensans;
+        font-weight: 700;
+        border-radius: 2rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    }
+}
+
+.components-header {
+    @include w-h(85%, auto);
+    padding-top: 2rem;
+    margin: auto;
+    @include d-grid (50%, 50%, auto);
+    place-items: center;
+    // column-gap: 1.5rem;
+}
+
+.texts {
+    @include w-h (80%, auto);
+    place-self: center start;
+
+    &--card {
+        grid-area: one;
+        @include w-h (100%, auto);
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-family: $font-poppins;
+        line-height: 1.5;
+        margin-bottom: 0;
+        color: $cyan-dark;
+
+        &--card {
+            font-size: 2rem;
+            color: $cyan-dark;
+        }
+
+        &--mod {
+            font-size: 2.2rem;
+            grid-area: one;
+            color: $cyan-dark;
+        }
+    }
+
+    &__paragraph {
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &--card {
+            color: $blue;
+        }
+    }
+
+    &__cta {
+        display: inline-block;
+        padding: 1rem 3rem;
+        margin-top: 1rem;
+        background-color: $pink;
+        border-radius: 2rem;
+        font-size: .9rem;
+        color: $cyan-pale;
+        font-weight: 700;
+
+        &--mod {
+            font-size: 1.1rem;
+            grid-area: two;
+            padding: 1.5rem 4rem;
+        }
+    }
+}
+
+.mockups {
+    text-align: end;
+
+    &__img {
+        @include w-h(100%, auto);
+    }
+}
+
+/*  ------------
+
+    sections two
+
+    ------------ */  
+
+.container-main {
+    padding: 10rem 0 5rem;
+    display: grid;
+    row-gap: 3rem;
+    position: relative;
+}
+
+.card {
+    @include w-h (70%, auto);
+    margin: auto;
+    @include d-grid-repeart (2, 50%, auto);
+    grid-template-areas:
+    'one two';
+    place-items: center;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    padding: 3rem 5rem;
+
+    &--mod {
+        padding: 3rem;
+        width: 50%;
+        @include d-grid-repeart (1, 1fr, auto); 
+        grid-template-areas: 
+        'one'
+        'two'; 
+        background-color: #fff;
+
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(2) {
+
+        .texts--card {
+            grid-area: two;
+        }
+
+        .picture {
+            grid-area: one;
+            order: 1;
+            text-align: start;
+        }
+    }
+}
+
+.picture {
+    grid-area: two;
+    text-align: end;
+
+    &__img {
+        @include w-h(75%, auto);
+    }
+}
+
+/* -----
+
+    footer
+    
+    ----- */
+
+
+.container-footer {
+    background-color: $cyan-dark;
+}
+
+.footer {
+    @include w-h(80%, auto);
+    padding: 8rem 0 4rem;
+    margin: auto;
+    @include d-grid-repeart (4, 1fr, auto);
+    grid-template-areas: 
+    'logo . . .'
+    'contact links links2 socials';
+    place-items: start center;
+
+    // background-color: $cyan-dark;
+    // color: $cyan-pale;
+
+    .logo {
+        grid-area: logo;
+        place-self: end start;
+        padding-bottom: 1rem;
+    }
+}
+
+.contact {
+    grid-area: contact;
+
+    &__icon {
+        margin-right: 1rem;
+        fill: $cyan-pale;
+    }
+}
+
+.components-links {
+    grid-area: links;
+    line-height: 2;
+
+    & + .components-links {
+        grid-area: links2;
+    }
+    
+}
+
+.socials {
+    grid-area: socials;
+    display: flex;
+    column-gap: 1rem;
+    padding-top: 1rem;
+}
+
+.social {
+    display: inline-block;
+    @include w-h (max-content, auto);
+
+    &__img {
+        @include w-h(20px, 20px);
+        border-radius: 50%;
+        border: 1px solid $cyan-pale;
+        padding: .5rem;
+        fill: $cyan-pale;
+    }
+}
+
+

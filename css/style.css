@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+:where(header, main, section) h1, :where(header, main, section) h2, :where(header, main, section) h3, :where(header, main, section) h4, :where(header, main, section) h5, :where(header, main, section) h6 {
+  font-family: "Poppins", sans-serif;
+}
+:where(header, main, section) a, :where(header, main, section) p {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+:where(footer) p, :where(footer) a {
+  color: #ebfbff;
+}
+:where(footer) ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.container-header {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding-bottom: 3rem;
+  background: #ebfbff url(../images/bg-hero-desktop.svg) no-repeat top center/contain;
+}
+
+.container-logo-free {
+  width: 85%;
+  height: auto;
+  padding-top: 2rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__img {
+  width: 200px;
+  height: auto;
+}
+
+.cta__text {
+  display: inline-block;
+  color: #00252e;
+  padding: 0.8rem 3rem;
+  font-size: 0.9rem;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  border-radius: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.components-header {
+  width: 85%;
+  height: auto;
+  padding-top: 2rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  place-items: center;
+}
+
+.texts {
+  width: 80%;
+  height: auto;
+  place-self: center start;
+}
+.texts--card {
+  grid-area: one;
+  width: 100%;
+  height: auto;
+}
+.texts__title {
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  margin-bottom: 0;
+  color: #00252e;
+}
+.texts__title--card {
+  font-size: 2rem;
+  color: #00252e;
+}
+.texts__title--mod {
+  font-size: 2.2rem;
+  grid-area: one;
+  color: #00252e;
+}
+.texts__paragraph {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.texts__paragraph--card {
+  color: #808d99;
+}
+.texts__cta {
+  display: inline-block;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+  background-color: #ff52bf;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  color: #ebfbff;
+  font-weight: 700;
+}
+.texts__cta--mod {
+  font-size: 1.1rem;
+  grid-area: two;
+  padding: 1.5rem 4rem;
+}
+
+.mockups {
+  text-align: end;
+}
+.mockups__img {
+  width: 100%;
+  height: auto;
+}
+
+/*  ------------
+
+    sections two
+
+    ------------ */
+.container-main {
+  padding: 10rem 0 5rem;
+  display: grid;
+  row-gap: 3rem;
+  position: relative;
+}
+
+.card {
+  width: 70%;
+  height: auto;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+  grid-template-areas: "one two";
+  place-items: center;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 1rem;
+  padding: 3rem 5rem;
+}
+.card--mod {
+  padding: 3rem;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "one" "two";
+  background-color: #fff;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card:nth-child(2) .texts--card {
+  grid-area: two;
+}
+.card:nth-child(2) .picture {
+  grid-area: one;
+  order: 1;
+  text-align: start;
+}
+
+.picture {
+  grid-area: two;
+  text-align: end;
+}
+.picture__img {
+  width: 75%;
+  height: auto;
+}
+
+/* -----
+
+    footer
+
+    ----- */
+.container-footer {
+  background-color: #00252e;
+}
+
+.footer {
+  width: 80%;
+  height: auto;
+  padding: 8rem 0 4rem;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "logo . . ." "contact links links2 socials";
+  place-items: start center;
+}
+.footer .logo {
+  grid-area: logo;
+  place-self: end start;
+  padding-bottom: 1rem;
+}
+
+.contact {
+  grid-area: contact;
+}
+.contact__icon {
+  margin-right: 1rem;
+  fill: #ebfbff;
+}
+
+.components-links {
+  grid-area: links;
+  line-height: 2;
+}
+.components-links + .components-links {
+  grid-area: links2;
+}
+
+.socials {
+  grid-area: socials;
+  display: flex;
+  column-gap: 1rem;
+  padding-top: 1rem;
+}
+
+.social {
+  display: inline-block;
+  width: max-content;
+  height: auto;
+}
+.social__img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ebfbff;
+  padding: 0.5rem;
+  fill: #ebfbff;
+}
+
+/*# sourceMappingURL=style.css.map */
