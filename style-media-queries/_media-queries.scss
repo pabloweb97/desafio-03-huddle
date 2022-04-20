@@ -86,12 +86,13 @@
 
     .card {
         width: 80%;
+        max-width: 380px;
         @include d-grid-repeart (1, 1fr, auto);
         row-gap: 2rem;
         grid-template-areas: 
         'two'
         'one';
-        padding: 1.5rem;
+        padding: 2rem 1.5rem;
         box-sizing: border-box;
 
         &--mod {

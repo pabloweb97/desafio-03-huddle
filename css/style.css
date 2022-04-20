@@ -333,12 +333,13 @@
 
   .card {
     width: 80%;
+    max-width: 380px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
     row-gap: 2rem;
     grid-template-areas: "two" "one";
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     box-sizing: border-box;
   }
   .card--mod {
