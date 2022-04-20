@@ -329,7 +329,7 @@
   }
 
   .card {
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
@@ -339,6 +339,7 @@
     box-sizing: border-box;
   }
   .card--mod {
+    width: 90%;
     padding: 1.5rem;
   }
   .card:nth-child(2) .texts--card {
