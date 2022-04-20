@@ -1,0 +1,149 @@
+@media screen and (max-width: 576px) {
+
+    /* -----
+
+    header
+
+    ----- */
+
+    .container-logo-free { 
+        width: 90%;
+    }
+
+    .logo {
+        &__img {
+            @include w-h(120px, auto);
+        }
+    }
+
+    .cta {
+        &__text {
+            padding: .5rem 1.5rem;
+        }
+    }
+    
+
+    .components-header {
+        width: 100%;
+        @include d-grid-repeart (1, 1fr, auto);
+        text-align: center;
+        row-gap: 3rem;
+    }
+
+    .texts {
+        margin: auto;
+
+        &__title {
+            font-size: 1.5rem;
+
+            &--mod {
+                font-size: 1rem;
+                grid-area: two;
+            }
+        }
+
+        &__paragraph {
+            font-family: $font-opensans;
+
+            &--card {
+                font-size: .9rem;
+            }
+        }
+
+        &--card {
+            text-align: center;
+        }
+
+        &__cta {
+            &--mod {
+                padding: .9rem 2rem;
+                grid-area: one;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    .mockups {
+        text-align: center;
+
+        &__img {
+            width: 80%;
+        }
+    }
+
+
+    /* -----
+
+    main
+
+    ----- */
+
+    .container-main {
+        padding: 5rem 0 3rem;
+    }
+
+    .card {
+        width: 90%;
+        @include d-grid-repeart (1, 1fr, auto);
+        row-gap: 2rem;
+        grid-template-areas: 
+        'two'
+        'one';
+        padding: 1.5rem;
+        box-sizing: border-box;
+
+        &--mod {
+            padding: 1.5rem;
+        }
+
+        &:nth-child(2) {
+
+            .texts--card {
+                grid-area: one;
+            }
+    
+            .picture {
+                grid-area: two;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .picture {
+        text-align: center;
+    }
+
+    /* -----
+
+    footer
+
+    ----- */
+
+    .footer {
+        width: 90%;
+        @include d-grid-repeart (1, 1fr, auto);
+        grid-template-areas: 
+        'logo'
+        'contact'
+        'links'
+        'links2'
+        'socials';
+        place-items: normal;
+        row-gap: 1.5rem;
+
+        .logo {
+            margin-bottom: 0;
+        }
+    }
+
+    .links {
+        padding: 0;
+    }
+
+    .socials {
+        padding-top: 2rem;
+        place-self: center;
+    }
+    
+}
