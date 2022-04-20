@@ -19,16 +19,17 @@
 
     .cta {
         &__text {
+            font-size: .8rem;
             padding: .5rem 1.5rem;
         }
     }
-    
 
     .components-header {
         width: 100%;
         @include d-grid-repeart (1, 1fr, auto);
         text-align: center;
         row-gap: 3rem;
+        padding-top: 4rem;
     }
 
     .texts {
