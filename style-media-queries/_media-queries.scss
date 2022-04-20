@@ -83,7 +83,7 @@
     }
 
     .card {
-        width: 90%;
+        width: 80%;
         @include d-grid-repeart (1, 1fr, auto);
         row-gap: 2rem;
         grid-template-areas: 
