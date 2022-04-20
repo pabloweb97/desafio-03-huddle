@@ -120,6 +120,10 @@
         color: $cyan-pale;
         font-weight: 700;
 
+        &:hover {
+            background-color: rgba(255, 82, 191, .8);
+        }
+
         &--mod {
             font-size: 1.1rem;
             grid-area: two;
@@ -263,6 +267,19 @@
     margin: 0;
 }
 
+.link__cta {
+    position: relative;
+
+    &:hover::after{
+        position: absolute;
+        content: '';
+        @include w-h(100%, 1px);
+        background-color: $cyan-pale;
+        top: 100%;
+        left: 0;
+    }
+}
+
 .socials {
     grid-area: socials;
     display: flex;
@@ -279,6 +296,11 @@
         border: 1px solid $cyan-pale;
         padding: .5rem;
         fill: $cyan-pale;
+
+        &:hover {
+            border-color: $pink;
+            fill: $pink;
+        }
     }
 }
 
